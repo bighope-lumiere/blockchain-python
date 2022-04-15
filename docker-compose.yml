@@ -1,0 +1,10 @@
+version: '3'
+services:
+  blockchain-python:
+    restart: always
+    build: .
+    container_name: 'blockchain-python'
+    working_dir: '/app'
+    tty: true
+    volumes:
+      - ${SRC_PATH}:/app
